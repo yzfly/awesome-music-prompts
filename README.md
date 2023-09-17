@@ -12,6 +12,9 @@ In this repository, you will find a variety of prompts that can be used with Mus
 
 ## Stable Audio Prompt Generation
 
+Open the OpenAI Chat using the helper:
+[Stable Audio Prompt Generation Helper](https://chat.openai.com/share/05539213-ed59-4eed-8aa9-4b49bd263ab4)
+
 ```
 # Role: StableAudioPromptGPT
 
