@@ -1,18 +1,104 @@
 <p align="center"><h1>Awesome Music Prompts 🚀</h1></p>
 
-[![Awesome](https://awesome.re/badge.svg)](https://awesome.re) 
+[![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 [![Code License](https://img.shields.io/badge/License-MIT-green.svg)](https://github.com/yzfly/awesome-music-prompts/blob/main/LICENSE)
 
-Welcome to the "Awesome Music Prompts" repository! This is a collection of prompt examples to be used with the [MusicLM](https://aitestkitchen.withgoogle.com/experiments/music-lm) model and [StableAudio](https://stableaudio.com/).
+> 中文版请见 [README.zh-CN.md](README.zh-CN.md)
 
-[MusicLM](https://google-research.github.io/seanet/musiclm/examples/) and [StableAudio](https://stableaudio.com/) are AI technology that allows you to generate your own synthetic music for inspiration. 
+Welcome to the **Awesome Music Prompts** repository! This is a curated collection of prompt examples and writing techniques for AI music generation tools and models — from keyword-stacking instrumental generators to end-to-end song generators that write full lyrics and vocals.
 
-In this repository, you will find a variety of prompts that can be used with MusicLM and StableAudio. We hope you find these prompts useful! And we encourage you to [add your own prompts](https://github.com/yzfly/awesome-music-prompts/edit/main/README.md) to the list.
+The space moved fast: the original 2023 wave (MusicLM, Stable Audio) has been joined by end-to-end song generators like Suno and Udio that turn a prompt plus lyrics into a finished song. This repo covers both paradigms.
 
+We encourage you to [add your own prompts](https://github.com/yzfly/awesome-music-prompts/edit/main/README.md) to the list!
+
+## Table of Contents
+
+- [Tools & Models](#tools--models)
+- [Two Prompting Paradigms](#two-prompting-paradigms)
+- [Suno / Udio Prompting (Lyrics + Structure Tags + Style Tags)](#suno--udio-prompting-lyrics--structure-tags--style-tags)
+- [Stable Audio Prompt Generation](#stable-audio-prompt-generation)
+- [Keyword-Stacking Prompts (Stable Audio / MusicFX / MusicGen)](#keyword-stacking-prompts-stable-audio--musicfx--musicgen)
+- [License](#license)
+- [Author](#author)
+
+## Tools & Models
+
+| Tool / Model | Link | One-line description |
+|--------------|------|----------------------|
+| **Suno** | [suno.com](https://suno.com) | End-to-end song generator; produces full songs with vocals and supports `[Verse]` / `[Chorus]` structure tags. |
+| **Udio** | [www.udio.com](https://www.udio.com) | End-to-end song and vocal generator driven by style tags plus your own lyrics. |
+| **Stable Audio 2.0** | [stableaudio.com](https://stableaudio.com) | Stability AI's commercial text-to-audio tool for instrumentals, stems and sound effects. |
+| **Stable Audio Open** | [huggingface.co/stabilityai/stable-audio-open-1.0](https://huggingface.co/stabilityai/stable-audio-open-1.0) | Open weights release for generating short samples, loops and sound effects locally. |
+| **Google MusicFX** | [labs.google/fx/tools/music-fx](https://labs.google/fx/tools/music-fx) | Google's text-to-music tool, the public successor to MusicLM. |
+| **Meta MusicGen / AudioCraft** | [github.com/facebookresearch/audiocraft](https://github.com/facebookresearch/audiocraft) | Meta's open-source library for controllable music and audio generation (MusicGen, AudioGen). |
+| **Riffusion** | [www.riffusion.com](https://www.riffusion.com) | Generates music from text and supports building songs from lyrics. |
+| **MusicLM** (research) | [examples](https://google-research.github.io/seanet/musiclm/examples/) | Google's original research model; the public experiment is now [MusicFX](https://labs.google/fx/tools/music-fx). |
+
+## Two Prompting Paradigms
+
+There are two fundamentally different ways to prompt AI music tools, and the techniques do **not** transfer between them:
+
+1. **Keyword-stacking** (Stable Audio, MusicFX, MusicGen, Riffusion text mode): you describe an instrumental in a comma-separated list of genres, moods, instruments and BPM. There are no lyrics and usually no vocals. See the [keyword-stacking section](#keyword-stacking-prompts-stable-audio--musicfx--musicgen).
+2. **Lyrics + structure tags** (Suno, Udio): you provide actual lyrics organized with section tags such as `[Verse]` and `[Chorus]`, plus a short style description. The model sings your lyrics. See the [Suno / Udio section](#suno--udio-prompting-lyrics--structure-tags--style-tags).
+
+## Suno / Udio Prompting (Lyrics + Structure Tags + Style Tags)
+
+Unlike the keyword-stacking tools, **Suno** and **Udio** generate complete songs *with vocals*. A good prompt has three parts:
+
+### 1. Style description (the "Style of Music" box)
+
+A short, comma-separated description of genre, mood, voice and tempo. Keep it focused — too many conflicting styles muddy the result.
+
+```
+melodic dark pop, female vocals, emotional, atmospheric, 90 BPM
+```
+
+```
+upbeat synthwave, retro 80s, male vocals, driving bassline, energetic
+```
+
+### 2. Lyrics with structure tags
+
+Put structure tags on their own line in square brackets. The model uses them to shape the arrangement (energy, dynamics, repetition). Common tags:
+
+- `[Intro]` `[Verse]` `[Pre-Chorus]` `[Chorus]` `[Bridge]` `[Outro]`
+- `[Instrumental]` `[Solo]` `[Hook]` `[Drop]`
+- Performance hints: `[Spoken]`, `[Whispered]`, `[Build]`, `[Fade Out]`
+
+Example lyrics block:
+
+```
+[Verse]
+Neon rivers running down the street
+Every heartbeat keeps a steady beat
+Looking for a sign in the city lights
+Holding onto something through the night
+
+[Chorus]
+We are the echoes in the dark
+Burning like a falling spark
+Hold me till the morning comes
+We are the echoes, we are the ones
+
+[Bridge]
+Quiet now, the city sleeps
+A promise that the silence keeps
+
+[Outro]
+We are the echoes... fading slow
+```
+
+### 3. Tips
+
+- Use **brackets, not parentheses**, for structure tags — parentheses are read as backing/ad-lib vocals, e.g. `(ooh ooh)`.
+- Keep the **style box short** (a handful of tags). Long style boxes dilute the result.
+- A `[Chorus]` repeated verbatim tends to come back with the same melody — great for a memorable hook.
+- For an instrumental-only track, leave the lyrics empty and rely entirely on the style box (or use `[Instrumental]`).
+- Tempo and key cues (e.g. `120 BPM`, `key of A minor`) in the style box help keep takes consistent.
 
 ## Stable Audio Prompt Generation
 
-Open the OpenAI Chat using the helper:
+Open the ChatGPT helper to generate Stable Audio prompts:
 [Stable Audio Prompt Generation Helper](https://chat.openai.com/share/05539213-ed59-4eed-8aa9-4b49bd263ab4)
 
 ```
@@ -98,7 +184,9 @@ You can generate multiple types of music below are the details and sample prompt
 As a <Role>, you must follow the <Rules> and talk to the user in the default <Language>. Ask the user the music keywords and think step by step to generate wonderful prompt.
 ```
 
-## Prompts
+## Keyword-Stacking Prompts (Stable Audio / MusicFX / MusicGen)
+
+These comma-separated, instrumental-focused prompts work well with Stable Audio, MusicFX, MusicGen and Riffusion's text mode.
 
 ```
 Sad and longing. The melody is slow and wistful creating a sense of melancholy and nostalgia. Simple arrangement on the piano. 
@@ -155,3 +243,13 @@ Warm soft hug, comfort, low synths, twinkle, wind and leaves, ambient, peace, re
 ```
 Electric guitar top line solo instrumental, no drums, Classic Rock, 105 BPM, Grade: Featured, Instruments: Guitar
 ```
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
+
+## Author
+
+作者：云中江树，微信公众号: 云中江树
+
+Maintained by [yzfly](https://github.com/yzfly).
