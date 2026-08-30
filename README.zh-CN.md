@@ -25,6 +25,10 @@
 
 | 工具 / 模型 | 链接 | 一句话简介 |
 |--------------|------|----------------------|
+| **Suno v5.5** | [suno.com](https://suno.com) | Suno 当前模型（2026 年 3 月）：新增 *Voices*（用你自己的声音唱）、按个人曲库训练的 *Custom Models* 与个性化引擎 *My Taste*，下文的标签 + 歌词写法依然适用。 |
+| **ACE-Step 1.5** | [github.com/ace-step/ACE-Step](https://github.com/ace-step/ACE-Step) | 开放权重的音乐基础模型（Apache-2.0），目前最接近「本地 Suno」；配合 [ace-step-ui](https://github.com/fspecii/ace-step-ui) 可获得类 Suno 的工作台。 |
+| **HeartMuLa** | [github.com/HeartMuLa/heartlib](https://github.com/HeartMuLa/heartlib) | 2026 年开源音乐生成模型，支持参考音频风格迁移；有 [HeartMuLa-Studio](https://github.com/fspecii/HeartMuLa-Studio) 与 ComfyUI 节点。 |
+| **audio.cpp** | [github.com/0xShug0/audio.cpp](https://github.com/0xShug0/audio.cpp) | 纯 C++（ggml）的音频模型推理引擎，一个本地二进制跑 TTS / STT / 变声 / 音乐生成。 |
 | **Suno** | [suno.com](https://suno.com) | 端到端歌曲生成器，可生成含人声的完整歌曲，支持 `[Verse]` / `[Chorus]` 等结构标签。 |
 | **Udio** | [www.udio.com](https://www.udio.com) | 端到端歌曲与人声生成器，通过风格标签加自定义歌词驱动。 |
 | **Stable Audio 2.0** | [stableaudio.com](https://stableaudio.com) | Stability AI 的商业文本转音频工具，可生成器乐、分轨与音效。 |

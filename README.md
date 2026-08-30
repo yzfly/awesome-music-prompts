@@ -25,6 +25,10 @@ We encourage you to [add your own prompts](https://github.com/yzfly/awesome-musi
 
 | Tool / Model | Link | One-line description |
 |--------------|------|----------------------|
+| **Suno v5.5** | [suno.com](https://suno.com) | Current Suno model (Mar 2026): adds *Voices* (sing with your own voice), *Custom Models* trained on your catalog and the *My Taste* personalizer — the tag/lyrics prompting below still applies. |
+| **ACE-Step 1.5** | [github.com/ace-step/ACE-Step](https://github.com/ace-step/ACE-Step) | Open-weight music foundation model (Apache-2.0), the closest local "Suno alternative"; [ace-step-ui](https://github.com/fspecii/ace-step-ui) gives it a Suno-like studio UI. |
+| **HeartMuLa** | [github.com/HeartMuLa/heartlib](https://github.com/HeartMuLa/heartlib) | Open-source music generation model (2026) with reference-audio style transfer; [HeartMuLa-Studio](https://github.com/fspecii/HeartMuLa-Studio) and a ComfyUI node exist. |
+| **audio.cpp** | [github.com/0xShug0/audio.cpp](https://github.com/0xShug0/audio.cpp) | Pure C++ (ggml) inference engine for audio models — TTS, STT, voice conversion and music generation on one local binary. |
 | **Suno** | [suno.com](https://suno.com) | End-to-end song generator; produces full songs with vocals and supports `[Verse]` / `[Chorus]` structure tags. |
 | **Udio** | [www.udio.com](https://www.udio.com) | End-to-end song and vocal generator driven by style tags plus your own lyrics. |
 | **Stable Audio 2.0** | [stableaudio.com](https://stableaudio.com) | Stability AI's commercial text-to-audio tool for instrumentals, stems and sound effects. |
