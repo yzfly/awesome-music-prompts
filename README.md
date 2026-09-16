@@ -99,6 +99,7 @@ We are the echoes... fading slow
 - A `[Chorus]` repeated verbatim tends to come back with the same melody — great for a memorable hook.
 - For an instrumental-only track, leave the lyrics empty and rely entirely on the style box (or use `[Instrumental]`).
 - Tempo and key cues (e.g. `120 BPM`, `key of A minor`) in the style box help keep takes consistent.
+- For a per-genre starting point, [Suno Style Recipes](https://github.com/samuelgrupolimex-prog/suno-style-recipes) lists 564 styles, each with a style-box prompt, BPM, and Suno's weirdness and style-influence values (CC0).
 
 ## Stable Audio Prompt Generation
 
