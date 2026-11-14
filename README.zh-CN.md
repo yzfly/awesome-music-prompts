@@ -25,7 +25,8 @@
 
 | 工具 / 模型 | 链接 | 一句话简介 |
 |--------------|------|----------------------|
-| **Suno v5.5** | [suno.com](https://suno.com) | Suno 当前模型（2026 年 3 月）：新增 *Voices*（用你自己的声音唱）、按个人曲库训练的 *Custom Models* 与个性化引擎 *My Taste*，下文的标签 + 歌词写法依然适用。 |
+| **Suno v6 / v6-wild / v6-mini** | [suno.com](https://suno.com) | Suno 当前模型家族（2026 年 9 月 9 日），基于授权音乐训练（[TechCrunch](https://techcrunch.com/2026/09/09/suno-replaces-its-ai-models-with-a-new-one-trained-on-licensed-music-as-copyright-suits-pile-up/)）：v6 是付费用户的可控默认模型，v6-wild 偏实验、适合找灵感，v6-mini 为免费用户的快速模型；支持用提示词或歌词中的词编辑歌曲片段，可用文本 / 图片 / 视频作参考；v4–v5.5 已全部下线。下方的标签与歌词写法依然适用。 |
+| **Suno v5.5** | [suno.com](https://suno.com) | 已随 v6 上线而下线（2026 年 3 月发布）：新增 *Voices*（用你自己的声音唱）、按个人曲库训练的 *Custom Models* 与个性化引擎 *My Taste*，下文的标签 + 歌词写法依然适用。 |
 | **ACE-Step 1.5** | [github.com/ace-step/ACE-Step](https://github.com/ace-step/ACE-Step) | 开放权重的音乐基础模型（Apache-2.0），目前最接近「本地 Suno」；配合 [ace-step-ui](https://github.com/fspecii/ace-step-ui) 可获得类 Suno 的工作台。 |
 | **HeartMuLa** | [github.com/HeartMuLa/heartlib](https://github.com/HeartMuLa/heartlib) | 2026 年开源音乐生成模型，支持参考音频风格迁移；有 [HeartMuLa-Studio](https://github.com/fspecii/HeartMuLa-Studio) 与 ComfyUI 节点。 |
 | **audio.cpp** | [github.com/0xShug0/audio.cpp](https://github.com/0xShug0/audio.cpp) | 纯 C++（ggml）的音频模型推理引擎，一个本地二进制跑 TTS / STT / 变声 / 音乐生成。 |
