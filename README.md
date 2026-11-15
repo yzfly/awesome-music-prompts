@@ -38,6 +38,7 @@ We encourage you to [add your own prompts](https://github.com/yzfly/awesome-musi
 | **Meta MusicGen / AudioCraft** | [github.com/facebookresearch/audiocraft](https://github.com/facebookresearch/audiocraft) | Meta's open-source library for controllable music and audio generation (MusicGen, AudioGen). |
 | **Riffusion** | [www.riffusion.com](https://www.riffusion.com) | Generates music from text and supports building songs from lyrics. |
 | **MusicLM** (research) | [examples](https://google-research.github.io/seanet/musiclm/examples/) | Google's original research model; the public experiment is now [MusicFX](https://labs.google/fx/tools/music-fx). |
+| **No Stairs Please MCP** | [nostairsplease.com/mcp](https://nostairsplease.com/mcp) | Hosted MCP server and live-music venue directory for touring bands, solo acts, and talent buyers across the US and Canada. |
 
 ## Two Prompting Paradigms
 
